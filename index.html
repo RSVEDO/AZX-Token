@@ -3,142 +3,124 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AZX Token - AZX</title>
+<title>AZX Token - Ouro Digital Blockchain</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&display=swap');
 
   body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: radial-gradient(circle at center, #1c1a12 0%, #000000 100%);
-    color: #f9f5e7;
-    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a 0%, #3d2f00 100%);
+    color: #f9d342;
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0; padding: 0;
   }
+
   header {
-    background: radial-gradient(circle at center, #bfa64f 0%, #6f5f19 80%);
-    text-align: center;
+    display: flex;
+    align-items: center;
     padding: 40px 20px;
-    box-shadow: 0 0 20px #d4c765;
+    background: #2c2c2c;
+    box-shadow: 0 0 15px #f9d342cc;
   }
-  header img {
-    width: 140px;
-    margin-bottom: 20px;
-    image-rendering: crisp-edges; /* melhora nitidez da imagem */
-    filter: drop-shadow(0 0 4px #f9e74a);
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
   }
-  header h1 {
-    font-size: 3rem;
-    color: #f9e74a;
-    letter-spacing: 0.15em;
-    text-shadow:
-      0 0 8px #d7c84a,
-      0 0 14px #f9e74a,
-      0 0 20px #bfa64f;
+
+  .logo-container img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 6px #f9d342);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
   }
-  header p {
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-top: -10px;
-    text-shadow: 0 0 7px #a89137;
+  .logo-container img:hover {
+    transform: scale(1.1);
+  }
+
+  .token-name {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-shadow: 0 0 10px #f9d342, 0 0 20px #ffec7d;
+    user-select: none;
+    transform: rotate(-10deg);
   }
 
   main {
     max-width: 900px;
-    margin: 30px auto;
-    padding: 20px 15px;
-    position: relative;
-    z-index: 2;
-  }
-
-  /* Fundo com imagem de moedas douradas */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background: url('https://cdn.pixabay.com/photo/2018/03/18/18/36/coins-3247254_1280.jpg') no-repeat center center/cover;
-    opacity: 0.1; /* opacidade baixa para não atrapalhar */
-    z-index: 1;
-    filter: brightness(0.8);
+    margin: 40px auto;
+    padding: 0 20px;
   }
 
   section {
-    margin-bottom: 60px;
-    background: rgba(31, 27, 7, 0.65);
-    padding: 25px 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px #bfa64f88 inset;
+    margin-bottom: 50px;
+    background: #2a2a2a;
+    border-radius: 10px;
+    padding: 30px 25px;
+    box-shadow: 0 0 20px #f9d34280;
   }
 
   h2 {
+    color: #f9d342;
+    font-weight: 900;
     font-size: 2rem;
-    color: #e7d560;
-    border-bottom: 3px solid #bfa64f;
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    text-shadow: 0 0 10px #c5b45d;
+    border-bottom: 2px solid #f9d342;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
   }
 
-  p, li {
+  p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #f3edcc;
-  }
-
-  ul {
-    list-style-type: disc;
-    margin-left: 25px;
+    color: #fff8b0;
   }
 
   table {
     width: 100%;
     border-collapse: collapse;
-    background: rgba(191, 166, 79, 0.2);
-    box-shadow: 0 0 18px #bfa64fbb inset;
+    background: #3a2f00;
+    box-shadow: 0 0 10px #f9d342aa;
   }
 
   th, td {
-    padding: 14px 20px;
-    border: 1px solid #bfa64faa;
+    border: 1px solid #f9d342aa;
+    padding: 12px 15px;
     text-align: left;
-    color: #f3edcc;
+    color: #fff8b0;
   }
 
   th {
-    background: rgba(191, 166, 79, 0.5);
-    font-weight: 700;
+    background-color: #f9d342;
+    color: #3a2f00;
   }
 
-  a.button {
-    background: linear-gradient(45deg, #d8c757, #a38c1f);
-    color: #1c1a12;
-    padding: 14px 28px;
-    font-weight: 700;
-    border-radius: 30px;
+  footer {
+    text-align: center;
+    padding: 25px 10px;
+    background: #2c2c2c;
+    color: #f9d342;
+    font-weight: 600;
+    box-shadow: 0 -4px 12px #f9d342cc;
+  }
+
+  a {
+    color: #f9d342;
     text-decoration: none;
-    display: inline-block;
-    box-shadow:
-      0 0 14px #f0e843,
-      0 6px 15px #a48a12;
-    transition: all 0.3s ease;
-    margin-top: 20px;
+    font-weight: 700;
   }
-  a.button:hover {
-    background: linear-gradient(45deg, #fff44a, #c6a313);
-    box-shadow:
-      0 0 22px #fff84d,
-      0 8px 25px #c6a313;
-    color: #1c1a12;
+  a:hover {
+    text-decoration: underline;
   }
 
-  /* Responsive */
-  @media (max-width: 640px) {
-    header h1 {
-      font-size: 2rem;
+  /* Responsividade */
+  @media(max-width: 600px) {
+    .logo-container {
+      gap: 15px;
     }
-    main {
-      margin: 15px;
-      padding: 15px 10px;
+    .token-name {
+      font-size: 2.5rem;
+      transform: rotate(-5deg);
     }
   }
 </style>
@@ -146,72 +128,48 @@
 <body>
 
 <header>
-  <img src="https://i.imgur.com/yourLogoLink.png" alt="AzevedoX Logo" />
-  <h1>AZX TOKEN</h1>
-  <p>O Ouro Digital da Nova Era Blockchain</p>
+  <div class="logo-container">
+    <img src="https://coffee-permanent-bovid-94.mypinata.cloud/ipfs/bafybeigmqc5vo3avnfqk6vofeuxdkvg5rawix4o7zylndbkvlrlajsdnaq" alt="AZX Logo" />
+    <div class="token-name">AZX Token</div>
+  </div>
 </header>
 
 <main>
-
   <section id="sobre">
     <h2>Sobre o AZX</h2>
-    <p>O AzevedoX (AZX) é um token BEP-20 construído para revolucionar o conceito de ativos digitais, trazendo segurança, valorização e liquidez automática para seus holders. Com um design inspirado no ouro e tecnologia de ponta, o AZX busca ser referência no mercado de criptoativos.</p>
+    <p>O <strong>AzevedoX (AZX)</strong> é um token BEP-20 construído para revolucionar o conceito de ativos digitais, trazendo segurança, valorização e liquidez automática para seus holders. Com um design inspirado no ouro e tecnologia de ponta, o AZX busca ser referência no mercado de criptoativos.</p>
   </section>
 
   <section id="tokenomics">
     <h2>Tokenomics</h2>
-    <p><strong>Nome:</strong> AzevedoX</p>
-    <p><strong>Símbolo:</strong> AZX</p>
-    <p><strong>Total Supply:</strong> 1.000.000.000 AZX</p>
-    <p><strong>Decimais:</strong> 18</p>
-
+    <table>
+      <tr><th>Nome</th><td>AzevedoX</td></tr>
+      <tr><th>Símbolo</th><td>AZX</td></tr>
+      <tr><th>Total Supply</th><td>1.000.000.000 AZX</td></tr>
+      <tr><th>Decimais</th><td>18</td></tr>
+    </table>
+    <br />
     <h3>Taxas e Destinação</h3>
     <table>
-      <thead>
-        <tr>
-          <th>Taxa</th>
-          <th>Percentual</th>
-          <th>Descrição</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Reflexão</td><td>3%</td><td>Redistribuição para holders</td></tr>
-        <tr><td>Liquidez</td><td>2%</td><td>Adicionada automaticamente ao pool</td></tr>
-        <tr><td>Marketing</td><td>1%</td><td>Fundo para desenvolvimento e ações</td></tr>
-        <tr><td>Queima</td><td>0.5%</td><td>Queima gradual para valorização</td></tr>
-      </tbody>
+      <tr><th>Taxa</th><th>Percentual</th><th>Descrição</th></tr>
+      <tr><td>Reflexão</td><td>3%</td><td>Redistribuição para holders</td></tr>
+      <tr><td>Liquidez Automática</td><td>2%</td><td>Adicionada à liquidez na PancakeSwap</td></tr>
+      <tr><td>Marketing</td><td>1%</td><td>Suporte e expansão do projeto</td></tr>
+      <tr><td>Queima</td><td>0,5%</td><td>Redução do supply para valorização</td></tr>
     </table>
-  </section>
-
-  <section id="roadmap">
-    <h2>Roadmap</h2>
-    <ul>
-      <li><strong>Q3 2025:</strong> Lançamento do token e listagem na PancakeSwap</li>
-      <li><strong>Q4 2025:</strong> Marketing intensivo e parcerias estratégicas</li>
-      <li><strong>Q1 2026:</strong> Auditoria oficial e atualização do contrato</li>
-      <li><strong>Q2 2026:</strong> Lançamento do staking e expansão para outras redes</li>
-    </ul>
-  </section>
-
-  <section id="time">
-    <h2>Nosso Time</h2>
-    <p>Uma equipe especializada em blockchain, marketing e desenvolvimento trabalhando para o sucesso do AZX.</p>
-    <ul>
-      <li><strong>Rodrigo Azevedo</strong> – Fundador & Desenvolvedor</li>
-      <li><strong>Maria Silva</strong> – Marketing & Comunidade</li>
-      <li><strong>Lucas Oliveira</strong> – Designer & Branding</li>
-    </ul>
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <p>Quer saber mais ou tirar dúvidas? Entre em contato conosco:</p>
-    <p>Email: <a href="mailto:contato@azevedox.io" style="color:#d9bf52;">contato@azevedox.io</a></p>
-    <p>Telegram: <a href="https://t.me/seugrupo" target="_blank" rel="noopener noreferrer" style="color:#d9bf52;">@seugrupo</a></p>
-    <a href="https://bscscan.com/token/0xSeuContratoAqui" target="_blank" rel="noopener noreferrer" class="button">Ver no BscScan</a>
+    <p>Para dúvidas, parcerias ou mais informações, entre em contato:</p>
+    <p>Email: <a href="mailto:contato@azxtoken.com">contato@azxtoken.com</a></p>
+    <p>Site oficial: <a href="https://rsvedo.github.io/AZX-Token/" target="_blank">rsvedo.github.io/AZX-Token</a></p>
   </section>
-
 </main>
+
+<footer>
+  &copy; 2025 AzevedoX - Todos os direitos reservados
+</footer>
 
 </body>
 </html>
