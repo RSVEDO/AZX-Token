@@ -6,82 +6,75 @@
   <title>AZX Token</title>
   <style>
     body {
-      background: #f9f5e7;
-      color: #5b4a00;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f5e3;
+      color: #6a5500;
     }
 
     header {
-      background: #c9aa2e;
-      padding: 20px 40px;
+      background-color: #c7a92f; /* amarelo ouro */
+      padding: 15px 30px;
       display: flex;
       align-items: center;
-      gap: 20px;
-      box-shadow: 0 4px 10px #b5921fcc;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
 
     header img {
-      width: 120px;
+      width: 80px;
       height: auto;
-      border-radius: 50%;
-      box-shadow: 0 0 20px #ffd54f;
-    }
-
-    header h1 {
-      font-size: 2.8rem;
-      font-weight: 900;
-      text-shadow: 0 0 8px #ffd54f;
-      margin: 0;
+      background-color: transparent; /* garante fundo transparente */
+      margin-right: 15px;
       user-select: none;
     }
 
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+      color: #4d3b00;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
     nav {
-      background: #a68400;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 12px 0;
-      box-shadow: 0 3px 8px #b5921faa;
+      margin-left: auto;
     }
 
     nav a {
-      color: #fff8dc;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1rem;
-      padding: 6px 16px;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
+      color: #4d3b00;
+      font-weight: 600;
+      margin-left: 25px;
+      font-size: 1rem;
+      transition: color 0.3s;
+      user-select: none;
     }
 
     nav a:hover {
-      background-color: #fff8dc;
-      color: #a68400;
+      color: #f9d342;
     }
 
     main {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 30px auto;
+      padding: 0 15px;
     }
 
     section {
-      background: #fff8dc;
-      padding: 20px 30px;
+      background-color: #fff9d3;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(198,169,47,0.35);
       margin-bottom: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px #b5921f77;
+      color: #5a4700;
     }
 
     h2 {
-      color: #a68400;
-      border-bottom: 2px solid #a68400;
-      padding-bottom: 8px;
       margin-top: 0;
-      user-select: none;
+      border-bottom: 2px solid #c7a92f;
+      padding-bottom: 5px;
+      font-weight: 700;
+      color: #4a3c00;
     }
 
     table {
@@ -90,62 +83,51 @@
       margin-top: 15px;
     }
 
-    table th,
-    table td {
-      border: 1px solid #a68400;
-      padding: 12px 15px;
+    th, td {
+      border: 1px solid #c7a92f;
+      padding: 10px;
       text-align: left;
+      color: #5a4700;
     }
 
-    table th {
-      background-color: #c9aa2e;
-      color: #fff8dc;
-    }
-
-    table tr:nth-child(even) {
-      background-color: #fffbe2;
+    th {
+      background-color: #c7a92f;
+      color: #3e2f00;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background: #c9aa2e;
-      color: #fff8dc;
-      font-weight: 600;
-      box-shadow: 0 -3px 10px #b5921fcc;
-      user-select: none;
-    }
-
-    a.contact-link {
-      color: #5b4a00;
-      font-weight: 700;
-      text-decoration: underline;
+      padding: 15px 0;
+      color: #8b7a00;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-
   <header>
     <img src="AZX.png" alt="AZX Token Logo" />
     <h1>AZX Token</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="README.html">README</a>
+      <a href="https://bscscan.com/token/0x96d40b6ccdd96a781bdaff0f062f0e4b86f8b95e" target="_blank" rel="noopener noreferrer">BscScan</a>
+      <a href="https://pancakeswap.finance/swap?outputCurrency=0x96d40b6ccdd96a781bdaff0f062f0e4b86f8b95e" target="_blank" rel="noopener noreferrer">Comprar</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="readme.html">README</a>
-    <a href="https://bscscan.com/token/0x96d40b6ccdd96a781bdaff0f062f0e4b86f8b95e" target="_blank" rel="noopener noreferrer">BscScan</a>
-    <a href="https://pancakeswap.finance/swap?outputCurrency=0x96d40b6ccdd96a781bdaff0f062f0e4b86f8b95e" target="_blank" rel="noopener noreferrer">Comprar</a>
-  </nav>
-
   <main>
-    <section>
+    <section id="sobre">
       <h2>Sobre o AZX Token</h2>
       <p>
-        O <strong>AZX Token</strong> é um token BEP-20 construído para revolucionar o conceito de ativos digitais, trazendo segurança, valorização e liquidez automática para seus holders. Com um design inspirado no ouro e tecnologia de ponta, o AZX Token busca ser referência no mercado de criptoativos.
+        O <strong>AZX Token</strong> é um token BEP-20 construído para revolucionar o conceito de ativos digitais,
+        trazendo segurança, valorização e liquidez automática para seus holders.
+        Com um design inspirado no ouro e tecnologia de ponta,
+        o AZX Token busca ser referência no mercado de criptoativos.
       </p>
     </section>
 
-    <section>
+    <section id="tokenomics">
       <h2>Tokenomics</h2>
       <table>
         <tr>
@@ -165,10 +147,8 @@
           <td>18</td>
         </tr>
       </table>
-    </section>
 
-    <section>
-      <h2>Taxas e Destinação</h2>
+      <h3 style="margin-top: 20px;">Taxas e Destinação</h3>
       <table>
         <tr>
           <th>Taxa</th>
@@ -198,17 +178,16 @@
       </table>
     </section>
 
-    <section>
+    <section id="contato">
       <h2>Contato</h2>
       <p>Para dúvidas, parcerias ou mais informações, entre em contato:</p>
-      <p>Email: <a class="contact-link" href="mailto:contato@azxtoken.com">contato@azxtoken.com</a></p>
-      <p>Site oficial: <a href="https://rsvedo.github.io/AZX-Token/" target="_blank" rel="noopener noreferrer">rsvedo.github.io/AZX-Token</a></p>
+      <p>Email: <a href="mailto:contato@azxtoken.com">contato@azxtoken.com</a></p>
+      <p>Site oficial: <a href="https://rsvedo.github.io/AZX-Token/" target="_blank">rsvedo.github.io/AZX-Token/</a></p>
     </section>
   </main>
 
   <footer>
     &copy; 2025 AZX Token. Todos os direitos reservados.
   </footer>
-
 </body>
 </html>
