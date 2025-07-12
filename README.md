@@ -30,7 +30,7 @@ AZX é um token BEP-20 criado na Binance Smart Chain com mecanismos automáticos
 
 1. Configure a Binance Smart Chain na sua carteira (MetaMask, Trust Wallet).  
 2. Acesse PancakeSwap e conecte sua carteira.  
-3. Pesquise pelo contrato do token AZX: `0xSeuContratoAqui`  
+3. Pesquise pelo contrato do token AZX: `0x96D40B6CCDD96a781bdAFF0F062F0E4b86f8B95e`  
 4. Realize a troca com slippage recomendado de 6%.
 
 ---
