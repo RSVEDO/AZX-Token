@@ -3,124 +3,145 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AZX Token - Ouro Digital Blockchain</title>
+<title>AZX Token</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&display=swap');
-
   body {
-    background: linear-gradient(135deg, #1a1a1a 0%, #3d2f00 100%);
+    background: linear-gradient(135deg, #5a4b0c, #211b03);
     color: #f9d342;
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0; padding: 0;
   }
-
   header {
+    background-color: #3e2e04cc;
+    box-shadow: 0 0 10px #f9d342cc;
+    padding: 15px 30px;
     display: flex;
     align-items: center;
-    padding: 40px 20px;
-    background: #2c2c2c;
-    box-shadow: 0 0 15px #f9d342cc;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
-
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-  }
-
-  .logo-container img {
-    width: 120px;
-    height: auto;
+  header img.logo {
+    height: 50px;
     filter: drop-shadow(0 0 6px #f9d342);
-    border-radius: 50%;
-    transition: transform 0.3s ease;
   }
-  .logo-container img:hover {
-    transform: scale(1.1);
+  nav {
+    display: flex;
+    gap: 20px;
   }
-
-  .token-name {
-    font-size: 3.5rem;
-    font-weight: 900;
-    text-shadow: 0 0 10px #f9d342, 0 0 20px #ffec7d;
-    user-select: none;
-    transform: rotate(-10deg);
+  nav button {
+    background: none;
+    border: none;
+    color: #f9d342;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
   }
-
+  nav button:hover, nav button.active {
+    background: #f9d342;
+    color: #3e2e04;
+  }
   main {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 30px auto;
     padding: 0 20px;
   }
-
-  section {
-    margin-bottom: 50px;
-    background: #2a2a2a;
-    border-radius: 10px;
-    padding: 30px 25px;
-    box-shadow: 0 0 20px #f9d34280;
+  h1, h2, h3 {
+    text-shadow: 0 0 6px #f9d342, 0 0 10px #ffec7d;
   }
-
-  h2 {
-    color: #f9d342;
+  h1 {
+    font-size: 3rem;
     font-weight: 900;
-    font-size: 2rem;
-    border-bottom: 2px solid #f9d342;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
-
-  p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #fff8b0;
+  h2 {
+    font-weight: 600;
+    color: #f7e969;
   }
-
+  section {
+    display: none;
+    background: rgba(0,0,0,0.7);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px #f9d342cc;
+  }
+  section.active {
+    display: block;
+  }
   table {
     width: 100%;
     border-collapse: collapse;
-    background: #3a2f00;
-    box-shadow: 0 0 10px #f9d342aa;
+    margin-top: 15px;
   }
-
+  table, th, td {
+    border: 1px solid #f9d342;
+  }
   th, td {
-    border: 1px solid #f9d342aa;
-    padding: 12px 15px;
+    padding: 12px;
     text-align: left;
-    color: #fff8b0;
   }
-
   th {
-    background-color: #f9d342;
-    color: #3a2f00;
+    background: #7a6708cc;
   }
-
-  footer {
-    text-align: center;
-    padding: 25px 10px;
-    background: #2c2c2c;
-    color: #f9d342;
-    font-weight: 600;
-    box-shadow: 0 -4px 12px #f9d342cc;
+  /* Botões externos */
+  .external-links {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
   }
-
-  a {
-    color: #f9d342;
-    text-decoration: none;
+  .external-links a {
+    background: #f9d342;
+    color: #3e2e04;
     font-weight: 700;
+    padding: 12px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 0 8px #f9d342aa;
+    transition: background 0.3s ease;
   }
-  a:hover {
-    text-decoration: underline;
+  .external-links a:hover {
+    background: #ffec7d;
   }
-
-  /* Responsividade */
-  @media(max-width: 600px) {
-    .logo-container {
+  /* Contato */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  label {
+    font-weight: 600;
+  }
+  input, textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+  }
+  input[type="submit"] {
+    background: #f9d342;
+    color: #3e2e04;
+    font-weight: 900;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: none;
+  }
+  input[type="submit"]:hover {
+    background: #ffec7d;
+  }
+  /* Responsivo */
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: center;
       gap: 15px;
     }
-    .token-name {
-      font-size: 2.5rem;
-      transform: rotate(-5deg);
+    nav {
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 </style>
@@ -128,48 +149,112 @@
 <body>
 
 <header>
-  <div class="logo-container">
-    <img src="https://coffee-permanent-bovid-94.mypinata.cloud/ipfs/bafybeigmqc5vo3avnfqk6vofeuxdkvg5rawix4o7zylndbkvlrlajsdnaq" alt="AZX Token Logo" />
-    <div class="token-name">AZX Token</div>
-  </div>
+  <img class="logo" src="https://coffee-permanent-bovid-94.mypinata.cloud/ipfs/bafybeigmqc5vo3avnfqk6vofeuxdkvg5rawix4o7zylndbkvlrlajsdnaq" alt="AZX Token Logo" />
+  <nav>
+    <button class="active" data-section="about">Sobre</button>
+    <button data-section="tokenomics">Tokenomics</button>
+    <button data-section="contact">Contato</button>
+  </nav>
 </header>
 
 <main>
-  <section id="sobre">
-    <h2>Sobre o AZX Token</h2>
-    <p>O <strong>AZX Token</strong> é um token BEP-20 construído para revolucionar o conceito de ativos digitais, trazendo segurança, valorização e liquidez automática para seus holders. Com um design inspirado no ouro e tecnologia de ponta, o AZX Token busca ser referência no mercado de criptoativos.</p>
+  <section id="about" class="active">
+    <h1>AZX TOKEN</h1>
+    <h2>O Ouro Digital da Nova Era Blockchain</h2>
+    <p>O AZX é um token BEP-20 construído para revolucionar o conceito de ativos digitais, trazendo segurança, valorização e liquidez automática para seus holders. Com um design inspirado no ouro e tecnologia de ponta, o AZX busca ser referência no mercado de criptoativos.</p>
   </section>
 
   <section id="tokenomics">
-    <h2>Tokenomics</h2>
+    <h3>Tokenomics</h3>
+    <p><strong>Nome:</strong> AZX Token</p>
+    <p><strong>Símbolo:</strong> AZX</p>
+    <p><strong>Total Supply:</strong> 1.000.000.000 AZX</p>
+    <p><strong>Decimais:</strong> 18</p>
+
+    <h4>Taxas e Destinação</h4>
     <table>
-      <tr><th>Nome</th><td>AZX Token</td></tr>
-      <tr><th>Símbolo</th><td>AZX</td></tr>
-      <tr><th>Total Supply</th><td>1.000.000.000 AZX</td></tr>
-      <tr><th>Decimais</th><td>18</td></tr>
-    </table>
-    <br />
-    <h3>Taxas e Destinação</h3>
-    <table>
-      <tr><th>Taxa</th><th>Percentual</th><th>Descrição</th></tr>
-      <tr><td>Reflexão</td><td>3%</td><td>Redistribuição para holders</td></tr>
-      <tr><td>Liquidez Automática</td><td>2%</td><td>Adicionada à liquidez na PancakeSwap</td></tr>
-      <tr><td>Marketing</td><td>1%</td><td>Suporte e expansão do projeto</td></tr>
-      <tr><td>Queima</td><td>0,5%</td><td>Redução do supply para valorização</td></tr>
+      <thead>
+        <tr>
+          <th>Taxa</th>
+          <th>Percentual</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reflexão</td>
+          <td>3%</td>
+          <td>Redistribuição para holders</td>
+        </tr>
+        <tr>
+          <td>Auto Liquidez</td>
+          <td>4%</td>
+          <td>Auto liquidez na PancakeSwap</td>
+        </tr>
+        <tr>
+          <td>Marketing</td>
+          <td>4%</td>
+          <td>Fundo para marketing e desenvolvimento</td>
+        </tr>
+        <tr>
+          <td>Queima</td>
+          <td>1%</td>
+          <td>Queima contínua para valorização</td>
+        </tr>
+      </tbody>
     </table>
   </section>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Para dúvidas, parcerias ou mais informações, entre em contato:</p>
-    <p>Email: <a href="mailto:contato@azxtoken.com">contato@azxtoken.com</a></p>
-    <p>Site oficial: <a href="https://rsvedo.github.io/AZX-Token/" target="_blank">rsvedo.github.io/AZX-Token</a></p>
+  <section id="contact">
+    <h3>Contato</h3>
+    <form onsubmit="return sendEmail(event)">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" placeholder="Seu nome" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
+
+      <input type="submit" value="Enviar" />
+    </form>
   </section>
 </main>
 
-<footer>
-  &copy; 2025 AZX Token - Todos os direitos reservados
-</footer>
+<div class="external-links" style="margin-bottom: 50px;">
+  <a href="https://bscscan.com/token/0x96D40B6CCDD96a781bdAFF0F062F0E4b86f8B95e" target="_blank" rel="noopener noreferrer">Ver no BscScan</a>
+  <a href="https://pancakeswap.finance/swap?outputCurrency=0x96D40B6CCDD96a781bdAFF0F062F0E4b86f8B95e" target="_blank" rel="noopener noreferrer">Comprar no PancakeSwap</a>
+  <a href="https://rsvedo.github.io/AZX-Token/" target="_blank" rel="noopener noreferrer">Site Oficial</a>
+</div>
+
+<script>
+  // Navegação simples
+  const buttons = document.querySelectorAll('nav button');
+  const sections = document.querySelectorAll('main section');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = btn.getAttribute('data-section');
+      sections.forEach(sec => {
+        if (sec.id === target) {
+          sec.classList.add('active');
+        } else {
+          sec.classList.remove('active');
+        }
+      });
+    });
+  });
+
+  // Simples função de envio de formulário (exemplo)
+  function sendEmail(e) {
+    e.preventDefault();
+    alert('Mensagem enviada! Em produção, conecte aqui um serviço de email.');
+    e.target.reset();
+  }
+</script>
 
 </body>
 </html>
