@@ -1,167 +1,214 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AZX Token - Home</title>
-<style>
-  body {
-    background: #fff8e1;
-    color: #6b5500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; padding: 0;
-  }
-  nav {
-    background: linear-gradient(90deg, #e6c46a, #d9b451);
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 4px 15px #d9b451cc;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  nav a {
-    color: #5a4200;
-    text-decoration: none;
-    margin: 0 18px;
-    font-weight: 700;
-    font-size: 1.1rem;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
-  header {
-    text-align: center;
-    padding: 40px 15px 15px;
-  }
-  header img {
-    width: 120px;
-    height: auto;
-    margin-bottom: 15px;
-  }
-  header h1 {
-    font-size: 3.5rem;
-    font-weight: 900;
-    color: #8a6d00;
-    text-shadow: 0 0 10px #f9d342;
-    margin: 0;
-    letter-spacing: 5px;
-  }
-  header p {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #a88e12;
-    margin-top: 8px;
-  }
-  main {
-    max-width: 900px;
-    margin: 40px auto 60px;
-    padding: 0 20px;
-  }
-  section {
-    background: #fff9db;
-    border-radius: 12px;
-    padding: 25px 30px;
-    margin-bottom: 40px;
-    box-shadow: 0 0 15px #d9b451aa;
-  }
-  section h2 {
-    color: #b28c00;
-    border-bottom: 2px solid #b28c00;
-    padding-bottom: 8px;
-    font-size: 1.9rem;
-    font-weight: 700;
-    margin-bottom: 18px;
-  }
-  section p, section table {
-    font-size: 1.1rem;
-    color: #5a4a00;
-    line-height: 1.6;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-  }
-  th, td {
-    border: 1px solid #d9b451;
-    padding: 12px 15px;
-  }
-  th {
-    background: #d9b451;
-    color: #3e2e00;
-    font-weight: 700;
-  }
-  td {
-    background: #fff8c3;
-  }
-  footer {
-    text-align: center;
-    padding: 25px 10px;
-    font-size: 0.9rem;
-    color: #a88e12;
-  }
-  a.button {
-    display: inline-block;
-    background-color: #d9b451;
-    color: #3e2e00;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 8px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  a.button:hover {
-    background-color: #b28c00;
-    color: #fff;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AZX Token</title>
+  <style>
+    body {
+      background: #f9f5e7;
+      color: #5b4a00;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #c9aa2e;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 4px 10px #b5921fcc;
+    }
+
+    header img {
+      width: 120px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #ffd54f;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      text-shadow: 0 0 8px #ffd54f;
+      margin: 0;
+      user-select: none;
+    }
+
+    nav {
+      background: #a68400;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 12px 0;
+      box-shadow: 0 3px 8px #b5921faa;
+    }
+
+    nav a {
+      color: #fff8dc;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 6px 16px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #fff8dc;
+      color: #a68400;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: #fff8dc;
+      padding: 20px 30px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #b5921f77;
+    }
+
+    h2 {
+      color: #a68400;
+      border-bottom: 2px solid #a68400;
+      padding-bottom: 8px;
+      margin-top: 0;
+      user-select: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #a68400;
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #c9aa2e;
+      color: #fff8dc;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #fffbe2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #c9aa2e;
+      color: #fff8dc;
+      font-weight: 600;
+      box-shadow: 0 -3px 10px #b5921fcc;
+      user-select: none;
+    }
+
+    a.contact-link {
+      color: #5b4a00;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="readme.html">README</a>
-  <a href="https://rsvedo.github.io/AZX-Token/" target="_blank" rel="noopener noreferrer">Site Oficial</a>
-  <a href="mailto:contato@azxtoken.com">Contato</a>
-</nav>
-<header>
-  <img src="https://coffee-permanent-bovid-94.mypinata.cloud/ipfs/bafybeiguwxwmf4wcl5k6ykvyvz7zh6wiqpuxtq6exxsdknpjcsg35fzjii" alt="AZX Token Logo" />
-  <h1>AZX TOKEN</h1>
-  <p>O Ouro Digital da Nova Era Blockchain</p>
-</header>
-<main>
-  <section>
-    <h2>Sobre o AZX Token</h2>
-    <p><strong>AZX Token</strong> é um token BEP-20 construído para revolucionar o conceito de ativos digitais, trazendo segurança, valorização e liquidez automática para seus holders. Com um design inspirado no ouro e tecnologia de ponta, o AZX Token busca ser referência no mercado de criptoativos.</p>
-    <a href="readme.html" class="button">Leia o README completo</a>
-  </section>
-  <section>
-    <h2>Tokenomics</h2>
-    <table>
-      <tr><th>Nome</th><td>AZX Token</td></tr>
-      <tr><th>Símbolo</th><td>AZX</td></tr>
-      <tr><th>Total Supply</th><td>1.000.000.000 AZX</td></tr>
-      <tr><th>Decimais</th><td>18</td></tr>
-    </table>
-    <h3>Taxas e Destinação</h3>
-    <table>
-      <tr><th>Taxa</th><th>Percentual</th><th>Descrição</th></tr>
-      <tr><td>Reflexão</td><td>3%</td><td>Redistribuição para holders</td></tr>
-      <tr><td>Liquidez Automática</td><td>2%</td><td>Adicionada à liquidez na PancakeSwap</td></tr>
-      <tr><td>Marketing</td><td>1%</td><td>Suporte e expansão do projeto</td></tr>
-      <tr><td>Queima</td><td>0,5%</td><td>Redução do supply para valorização</td></tr>
-    </table>
-  </section>
-  <section>
-    <h2>Contato</h2>
-    <p>Para dúvidas, parcerias ou mais informações, entre em contato:</p>
-    <p>Email: <a href="mailto:contato@azxtoken.com">contato@azxtoken.com</a></p>
-    <p>Site oficial: <a href="https://rsvedo.github.io/AZX-Token/" target="_blank" rel="noopener noreferrer">rsvedo.github.io/AZX-Token</a></p>
-  </section>
-</main>
-<footer>
-  &copy; 2025 AZX Token. Todos os direitos reservados.
-</footer>
+
+  <header>
+    <img src="AZX.png" alt="AZX Token Logo" />
+    <h1>AZX Token</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="readme.html">README</a>
+    <a href="https://bscscan.com/token/0x96d40b6ccdd96a781bdaff0f062f0e4b86f8b95e" target="_blank" rel="noopener noreferrer">BscScan</a>
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0x96d40b6ccdd96a781bdaff0f062f0e4b86f8b95e" target="_blank" rel="noopener noreferrer">Comprar</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Sobre o AZX Token</h2>
+      <p>
+        O <strong>AZX Token</strong> é um token BEP-20 construído para revolucionar o conceito de ativos digitais, trazendo segurança, valorização e liquidez automática para seus holders. Com um design inspirado no ouro e tecnologia de ponta, o AZX Token busca ser referência no mercado de criptoativos.
+      </p>
+    </section>
+
+    <section>
+      <h2>Tokenomics</h2>
+      <table>
+        <tr>
+          <th>Nome</th>
+          <td>AZX Token</td>
+        </tr>
+        <tr>
+          <th>Símbolo</th>
+          <td>AZX</td>
+        </tr>
+        <tr>
+          <th>Total Supply</th>
+          <td>1.000.000.000 AZX</td>
+        </tr>
+        <tr>
+          <th>Decimais</th>
+          <td>18</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Taxas e Destinação</h2>
+      <table>
+        <tr>
+          <th>Taxa</th>
+          <th>Percentual</th>
+          <th>Descrição</th>
+        </tr>
+        <tr>
+          <td>Reflexão</td>
+          <td>3%</td>
+          <td>Redistribuição para holders</td>
+        </tr>
+        <tr>
+          <td>Liquidez Automática</td>
+          <td>2%</td>
+          <td>Adicionada à liquidez na PancakeSwap</td>
+        </tr>
+        <tr>
+          <td>Marketing</td>
+          <td>1%</td>
+          <td>Suporte e expansão do projeto</td>
+        </tr>
+        <tr>
+          <td>Queima</td>
+          <td>0,5%</td>
+          <td>Redução do supply para valorização</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Contato</h2>
+      <p>Para dúvidas, parcerias ou mais informações, entre em contato:</p>
+      <p>Email: <a class="contact-link" href="mailto:contato@azxtoken.com">contato@azxtoken.com</a></p>
+      <p>Site oficial: <a href="https://rsvedo.github.io/AZX-Token/" target="_blank" rel="noopener noreferrer">rsvedo.github.io/AZX-Token</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 AZX Token. Todos os direitos reservados.
+  </footer>
+
 </body>
 </html>
