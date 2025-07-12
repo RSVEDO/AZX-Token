@@ -6,255 +6,131 @@
 <title>AZX Token</title>
 <style>
   body {
-    background: linear-gradient(135deg, #5a4b0c, #211b03);
-    color: #f9d342;
+    background: #ffffff;
+    color: #6b5500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0; padding: 0;
   }
   header {
-    background-color: #3e2e04cc;
-    box-shadow: 0 0 10px #f9d342cc;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    background: linear-gradient(90deg, #e6c46a, #d9b451);
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px #d9b451cc;
   }
-  header img.logo {
-    height: 50px;
-    filter: drop-shadow(0 0 6px #f9d342);
+  header img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
   }
-  nav {
-    display: flex;
-    gap: 20px;
+  header h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #8a6d00;
+    text-shadow: 0 0 10px #f9d342;
+    margin: 0;
+    letter-spacing: 5px;
   }
-  nav button {
-    background: none;
-    border: none;
-    color: #f9d342;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 8px 12px;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-  }
-  nav button:hover, nav button.active {
-    background: #f9d342;
-    color: #3e2e04;
+  header p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #a88e12;
+    margin-top: 8px;
   }
   main {
     max-width: 900px;
-    margin: 30px auto;
+    margin: 40px auto;
     padding: 0 20px;
   }
-  h1, h2, h3 {
-    text-shadow: 0 0 6px #f9d342, 0 0 10px #ffec7d;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 900;
-    margin-bottom: 10px;
-  }
-  h2 {
-    font-weight: 600;
-    color: #f7e969;
-  }
   section {
-    display: none;
-    background: rgba(0,0,0,0.7);
-    padding: 25px;
+    background: #fff9db;
     border-radius: 12px;
-    box-shadow: 0 0 25px #f9d342cc;
+    padding: 25px 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 15px #d9b451aa;
   }
-  section.active {
-    display: block;
+  section h2 {
+    color: #b28c00;
+    border-bottom: 2px solid #b28c00;
+    padding-bottom: 8px;
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  section p, section table, section ul {
+    font-size: 1.1rem;
+    color: #5a4a00;
+    line-height: 1.6;
   }
   table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
   }
-  table, th, td {
-    border: 1px solid #f9d342;
-  }
   th, td {
-    padding: 12px;
-    text-align: left;
+    border: 1px solid #d9b451;
+    padding: 12px 15px;
   }
   th {
-    background: #7a6708cc;
-  }
-  /* Botões externos */
-  .external-links {
-    margin-top: 25px;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-  }
-  .external-links a {
-    background: #f9d342;
-    color: #3e2e04;
+    background: #d9b451;
+    color: #3e2e00;
     font-weight: 700;
-    padding: 12px 18px;
-    border-radius: 20px;
+  }
+  td {
+    background: #fff8c3;
+  }
+  footer {
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 0.9rem;
+    color: #a88e12;
+  }
+  a {
+    color: #b28c00;
+    font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 0 8px #f9d342aa;
-    transition: background 0.3s ease;
   }
-  .external-links a:hover {
-    background: #ffec7d;
-  }
-  /* Contato */
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  label {
-    font-weight: 600;
-  }
-  input, textarea {
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    font-size: 1rem;
-  }
-  input[type="submit"] {
-    background: #f9d342;
-    color: #3e2e04;
-    font-weight: 900;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    border: none;
-  }
-  input[type="submit"]:hover {
-    background: #ffec7d;
-  }
-  /* Responsivo */
-  @media (max-width: 600px) {
-    header {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-    nav {
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+  a:hover {
+    text-decoration: underline;
   }
 </style>
 </head>
 <body>
-
 <header>
-  <img class="logo" src="https://coffee-permanent-bovid-94.mypinata.cloud/ipfs/bafybeigmqc5vo3avnfqk6vofeuxdkvg5rawix4o7zylndbkvlrlajsdnaq" alt="AZX Token Logo" />
-  <nav>
-    <button class="active" data-section="about">Sobre</button>
-    <button data-section="tokenomics">Tokenomics</button>
-    <button data-section="contact">Contato</button>
-  </nav>
+  <img src="https://coffee-permanent-bovid-94.mypinata.cloud/ipfs/bafybeiguwxwmf4wcl5k6ykvyvz7zh6wiqpuxtq6exxsdknpjcsg35fzjii" alt="AZX Token Logo" />
+  <h1>AZX TOKEN</h1>
+  <p>O Ouro Digital da Nova Era Blockchain</p>
 </header>
-
 <main>
-  <section id="about" class="active">
-    <h1>AZX TOKEN</h1>
-    <h2>O Ouro Digital da Nova Era Blockchain</h2>
-    <p>O AZX é um token BEP-20 construído para revolucionar o conceito de ativos digitais, trazendo segurança, valorização e liquidez automática para seus holders. Com um design inspirado no ouro e tecnologia de ponta, o AZX busca ser referência no mercado de criptoativos.</p>
+  <section>
+    <h2>Sobre o AZX Token</h2>
+    <p><strong>AZX Token</strong> é um token BEP-20 construído para revolucionar o conceito de ativos digitais, trazendo segurança, valorização e liquidez automática para seus holders. Com um design inspirado no ouro e tecnologia de ponta, o AZX Token busca ser referência no mercado de criptoativos.</p>
   </section>
-
-  <section id="tokenomics">
-    <h3>Tokenomics</h3>
-    <p><strong>Nome:</strong> AZX Token</p>
-    <p><strong>Símbolo:</strong> AZX</p>
-    <p><strong>Total Supply:</strong> 1.000.000.000 AZX</p>
-    <p><strong>Decimais:</strong> 18</p>
-
-    <h4>Taxas e Destinação</h4>
+  <section>
+    <h2>Tokenomics</h2>
     <table>
-      <thead>
-        <tr>
-          <th>Taxa</th>
-          <th>Percentual</th>
-          <th>Descrição</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Reflexão</td>
-          <td>3%</td>
-          <td>Redistribuição para holders</td>
-        </tr>
-        <tr>
-          <td>Auto Liquidez</td>
-          <td>4%</td>
-          <td>Auto liquidez na PancakeSwap</td>
-        </tr>
-        <tr>
-          <td>Marketing</td>
-          <td>4%</td>
-          <td>Fundo para marketing e desenvolvimento</td>
-        </tr>
-        <tr>
-          <td>Queima</td>
-          <td>1%</td>
-          <td>Queima contínua para valorização</td>
-        </tr>
-      </tbody>
+      <tr><th>Nome</th><td>AZX Token</td></tr>
+      <tr><th>Símbolo</th><td>AZX</td></tr>
+      <tr><th>Total Supply</th><td>1.000.000.000 AZX</td></tr>
+      <tr><th>Decimais</th><td>18</td></tr>
+    </table>
+    <h3>Taxas e Destinação</h3>
+    <table>
+      <tr><th>Taxa</th><th>Percentual</th><th>Descrição</th></tr>
+      <tr><td>Reflexão</td><td>3%</td><td>Redistribuição para holders</td></tr>
+      <tr><td>Liquidez Automática</td><td>2%</td><td>Adicionada à liquidez na PancakeSwap</td></tr>
+      <tr><td>Marketing</td><td>1%</td><td>Suporte e expansão do projeto</td></tr>
+      <tr><td>Queima</td><td>0,5%</td><td>Redução do supply para valorização</td></tr>
     </table>
   </section>
-
-  <section id="contact">
-    <h3>Contato</h3>
-    <form onsubmit="return sendEmail(event)">
-      <label for="name">Nome:</label>
-      <input type="text" id="name" name="name" placeholder="Seu nome" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="seu@email.com" required />
-
-      <label for="message">Mensagem:</label>
-      <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
-
-      <input type="submit" value="Enviar" />
-    </form>
+  <section>
+    <h2>Contato</h2>
+    <p>Para dúvidas, parcerias ou mais informações, entre em contato:</p>
+    <p>Email: <a href="mailto:contato@azxtoken.com">contato@azxtoken.com</a></p>
+    <p>Site oficial: <a href="https://rsvedo.github.io/AZX-Token/" target="_blank" rel="noopener noreferrer">rsvedo.github.io/AZX-Token</a></p>
   </section>
 </main>
-
-<div class="external-links" style="margin-bottom: 50px;">
-  <a href="https://bscscan.com/token/0x96D40B6CCDD96a781bdAFF0F062F0E4b86f8B95e" target="_blank" rel="noopener noreferrer">Ver no BscScan</a>
-  <a href="https://pancakeswap.finance/swap?outputCurrency=0x96D40B6CCDD96a781bdAFF0F062F0E4b86f8B95e" target="_blank" rel="noopener noreferrer">Comprar no PancakeSwap</a>
-  <a href="https://rsvedo.github.io/AZX-Token/" target="_blank" rel="noopener noreferrer">Site Oficial</a>
-</div>
-
-<script>
-  // Navegação simples
-  const buttons = document.querySelectorAll('nav button');
-  const sections = document.querySelectorAll('main section');
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const target = btn.getAttribute('data-section');
-      sections.forEach(sec => {
-        if (sec.id === target) {
-          sec.classList.add('active');
-        } else {
-          sec.classList.remove('active');
-        }
-      });
-    });
-  });
-
-  // Simples função de envio de formulário (exemplo)
-  function sendEmail(e) {
-    e.preventDefault();
-    alert('Mensagem enviada! Em produção, conecte aqui um serviço de email.');
-    e.target.reset();
-  }
-</script>
-
+<footer>
+  &copy; 2025 AZX Token. Todos os direitos reservados.
+</footer>
 </body>
 </html>
