@@ -1,54 +1,35 @@
-# AZX Token - (AZX)
+# AZX Token
 
-## Sobre
+## Sobre o AZX Token
 
-AZX é um token BEP-20 criado na Binance Smart Chain com mecanismos automáticos de taxas para reflexões (redistribuição), liquidez, marketing e queima, garantindo valorização e segurança para seus holders.
-
----
+O **AZX Token** é um token BEP-20 construído para revolucionar o conceito de ativos digitais, trazendo segurança, valorização e liquidez automática para seus holders. Com um design inspirado no ouro e tecnologia de ponta, o AZX Token busca ser referência no mercado de criptoativos.
 
 ## Tokenomics
 
-- Nome: AZX Token 
-- Símbolo: AZX  
-- Total Supply: 1.000.000.000 AZX  
-- Decimais: 18  
+- **Nome:** AZX Token  
+- **Símbolo:** AZX  
+- **Total Supply:** 1.000.000.000 AZX  
+- **Decimais:** 18  
 
----
+### Taxas e Destinação
 
-## Taxas
+| Taxa               | Percentual | Descrição                          |
+|--------------------|------------|----------------------------------|
+| Reflexão           | 3%         | Redistribuição para holders      |
+| Liquidez Automática | 2%         | Adicionada à liquidez na PancakeSwap |
+| Marketing          | 1%         | Suporte e expansão do projeto    |
+| Queima             | 0,5%       | Redução do supply para valorização |
 
-| Taxa         | Percentual | Descrição                                  |
-|--------------|------------|--------------------------------------------|
-| Reflexão     | 3%         | Redistribuição para holders                 |
-| Liquidez     | 2%         | Adicionada automaticamente ao pool          |
-| Marketing    | 1%         | Fundo para ações e desenvolvimento           |
-| Queima       | 0.5%       | Queima gradual para valorização              |
+## Como Comprar
 
----
+Você pode adquirir o AZX Token na PancakeSwap ou outras exchanges descentralizadas que listarem o token.
 
-## Como comprar
-
-1. Configure a Binance Smart Chain na sua carteira (MetaMask, Trust Wallet).  
-2. Acesse PancakeSwap e conecte sua carteira.  
-3. Pesquise pelo contrato do token AZX: `0x96D40B6CCDD96a781bdAFF0F062F0E4b86f8B95e`  
-4. Realize a troca com slippage recomendado de 6%.
-
----
-
-## Links úteis
-
-- [Contrato no BscScan](https://bscscan.com/token/0xSeuContratoAqui)  
-- [Telegram Oficial](https://t.me/seugrupo)  
-- [Twitter Oficial](https://twitter.com/seuprojeto)
-
----
+Use o endereço do contrato para evitar golpes:  
+`0x96D40B6CCDD96a781bdAFF0F062F0E4b86f8B95e`
 
 ## Contato
 
-Para dúvidas e suporte, entre em contato no nosso Telegram oficial.
+Para dúvidas, parcerias ou mais informações, entre em contato:
 
----
-
-## Licença
-
-Este projeto está aberto para a comunidade.  
+- Email: contato@azxtoken.com  
+- Site oficial: [https://rsvedo.github.io/AZX-Token/](https://rsvedo.github.io/AZX-Token/)
