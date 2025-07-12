@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AZX Token - AZX </title>
+<title>AZX Token - AZX</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
@@ -23,6 +23,7 @@
   header img {
     width: 140px;
     margin-bottom: 20px;
+    image-rendering: crisp-edges; /* melhora nitidez da imagem */
     filter: drop-shadow(0 0 4px #f9e74a);
   }
   header h1 {
@@ -30,25 +31,43 @@
     color: #f9e74a;
     letter-spacing: 0.15em;
     text-shadow:
-      0 0 5px #d7c84a,
-      0 0 10px #f9e74a,
-      0 0 15px #bfa64f;
+      0 0 8px #d7c84a,
+      0 0 14px #f9e74a,
+      0 0 20px #bfa64f;
   }
   header p {
     font-weight: 600;
     font-size: 1.2rem;
     margin-top: -10px;
-    text-shadow: 0 0 5px #a89137;
+    text-shadow: 0 0 7px #a89137;
   }
 
   main {
     max-width: 900px;
     margin: 30px auto;
-    padding: 0 15px;
+    padding: 20px 15px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Fundo com imagem de moedas douradas */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: url('https://cdn.pixabay.com/photo/2018/03/18/18/36/coins-3247254_1280.jpg') no-repeat center center/cover;
+    opacity: 0.1; /* opacidade baixa para não atrapalhar */
+    z-index: 1;
+    filter: brightness(0.8);
   }
 
   section {
     margin-bottom: 60px;
+    background: rgba(31, 27, 7, 0.65);
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #bfa64f88 inset;
   }
 
   h2 {
@@ -57,7 +76,7 @@
     border-bottom: 3px solid #bfa64f;
     padding-bottom: 10px;
     margin-bottom: 25px;
-    text-shadow: 0 0 6px #c5b45d;
+    text-shadow: 0 0 10px #c5b45d;
   }
 
   p, li {
@@ -74,41 +93,41 @@
   table {
     width: 100%;
     border-collapse: collapse;
-    background: rgba(191, 166, 79, 0.1);
-    box-shadow: 0 0 15px #bfa64f88 inset;
+    background: rgba(191, 166, 79, 0.2);
+    box-shadow: 0 0 18px #bfa64fbb inset;
   }
 
   th, td {
-    padding: 12px 18px;
-    border: 1px solid #bfa64f77;
+    padding: 14px 20px;
+    border: 1px solid #bfa64faa;
     text-align: left;
     color: #f3edcc;
   }
 
   th {
-    background: rgba(191, 166, 79, 0.3);
+    background: rgba(191, 166, 79, 0.5);
     font-weight: 700;
   }
 
   a.button {
     background: linear-gradient(45deg, #d8c757, #a38c1f);
     color: #1c1a12;
-    padding: 14px 26px;
+    padding: 14px 28px;
     font-weight: 700;
     border-radius: 30px;
     text-decoration: none;
     display: inline-block;
     box-shadow:
-      0 0 10px #f0e843,
-      0 4px 10px #a48a12;
+      0 0 14px #f0e843,
+      0 6px 15px #a48a12;
     transition: all 0.3s ease;
-    margin-top: 15px;
+    margin-top: 20px;
   }
   a.button:hover {
-    background: linear-gradient(45deg, #f8e956, #c6a313);
+    background: linear-gradient(45deg, #fff44a, #c6a313);
     box-shadow:
-      0 0 15px #fff84d,
-      0 6px 20px #c6a313;
+      0 0 22px #fff84d,
+      0 8px 25px #c6a313;
     color: #1c1a12;
   }
 
@@ -119,10 +138,9 @@
     }
     main {
       margin: 15px;
-      padding: 0 10px;
+      padding: 15px 10px;
     }
   }
-
 </style>
 </head>
 <body>
