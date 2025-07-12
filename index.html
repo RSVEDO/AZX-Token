@@ -3,19 +3,36 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AZX Token</title>
+<title>AZX Token - Home</title>
 <style>
   body {
-    background: #ffffff;
+    background: #fff8e1;
     color: #6b5500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0; padding: 0;
   }
-  header {
+  nav {
     background: linear-gradient(90deg, #e6c46a, #d9b451);
-    padding: 30px 0;
+    padding: 15px 0;
     text-align: center;
     box-shadow: 0 4px 15px #d9b451cc;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav a {
+    color: #5a4200;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  header {
+    text-align: center;
+    padding: 40px 15px 15px;
   }
   header img {
     width: 120px;
@@ -38,7 +55,7 @@
   }
   main {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 40px auto 60px;
     padding: 0 20px;
   }
   section {
@@ -56,7 +73,7 @@
     font-weight: 700;
     margin-bottom: 18px;
   }
-  section p, section table, section ul {
+  section p, section table {
     font-size: 1.1rem;
     color: #5a4a00;
     line-height: 1.6;
@@ -84,17 +101,30 @@
     font-size: 0.9rem;
     color: #a88e12;
   }
-  a {
-    color: #b28c00;
+  a.button {
+    display: inline-block;
+    background-color: #d9b451;
+    color: #3e2e00;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
     font-weight: 700;
     text-decoration: none;
+    transition: background-color 0.3s ease;
   }
-  a:hover {
-    text-decoration: underline;
+  a.button:hover {
+    background-color: #b28c00;
+    color: #fff;
   }
 </style>
 </head>
 <body>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="readme.html">README</a>
+  <a href="https://rsvedo.github.io/AZX-Token/" target="_blank" rel="noopener noreferrer">Site Oficial</a>
+  <a href="mailto:contato@azxtoken.com">Contato</a>
+</nav>
 <header>
   <img src="https://coffee-permanent-bovid-94.mypinata.cloud/ipfs/bafybeiguwxwmf4wcl5k6ykvyvz7zh6wiqpuxtq6exxsdknpjcsg35fzjii" alt="AZX Token Logo" />
   <h1>AZX TOKEN</h1>
@@ -104,6 +134,7 @@
   <section>
     <h2>Sobre o AZX Token</h2>
     <p><strong>AZX Token</strong> é um token BEP-20 construído para revolucionar o conceito de ativos digitais, trazendo segurança, valorização e liquidez automática para seus holders. Com um design inspirado no ouro e tecnologia de ponta, o AZX Token busca ser referência no mercado de criptoativos.</p>
+    <a href="readme.html" class="button">Leia o README completo</a>
   </section>
   <section>
     <h2>Tokenomics</h2>
