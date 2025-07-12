@@ -17,51 +17,8 @@
     overflow-x: hidden;
   }
 
-  /* Fundo animado */
-  .background-container {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 0;
-  }
-  .gold-bar, .gold-coin {
-    position: absolute;
-    opacity: 0.3;
-    animation: floatUp 20s linear infinite;
-  }
-  .gold-bar {
-    width: 120px; /* maior */
-    height: 45px; /* maior */
-    background: linear-gradient(90deg, #d4af37, #f5e18c, #d4af37);
-    border-radius: 5px;
-    box-shadow: 0 0 20px #d4af37;
-  }
-  .gold-coin {
-    width: 70px; /* maior */
-    height: 70px; /* maior */
-    background: radial-gradient(circle at center, #ffec7d 40%, #d4af37 90%);
-    border-radius: 50%;
-    box-shadow: inset 0 0 15px #f5e18c;
-  }
-  @keyframes floatUp {
-    0% {
-      transform: translateY(100vh) translateX(0) rotate(0deg);
-      opacity: 0.3;
-    }
-    50% {
-      opacity: 0.6;
-    }
-    100% {
-      transform: translateY(-150px) translateX(50px) rotate(360deg);
-      opacity: 0;
-    }
-  }
-
-  /* Conteúdo principal acima do fundo */
+  /* Container geral */
   .content-container {
-    position: relative;
-    z-index: 1;
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
@@ -73,18 +30,30 @@
     padding: 20px;
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 40px;
     box-shadow: 0 2px 5px #a08626;
+    border-radius: 10px 10px 0 0;
+    position: relative;
   }
-  header img {
-    width: 140px; /* maior */
+  header img.logo {
+    width: 120px; /* tamanho logo maior */
     height: auto;
+  }
+  header img.gold-bars {
+    width: 200px; /* barra de ouro maior */
+    height: auto;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   header h1 {
     margin: 0;
-    font-size: 3rem; /* maior */
-    color: #5a4700;
+    font-size: 3.5rem; /* tamanho maior */
+    color: #4a3d00;
     text-shadow: 1px 1px 2px #fff4b2;
+    font-weight: bold;
+    flex-grow: 1;
   }
 
   /* Menu de navegação */
@@ -92,18 +61,25 @@
     background: #a38621;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     padding: 12px 0;
     box-shadow: 0 2px 5px #8b731a;
+    border-radius: 0 0 10px 10px;
   }
   nav a {
-    color: #fff9d5;
+    background-color: #d3b840;
+    border-radius: 8px;
+    color: #423400;
     font-weight: bold;
     text-decoration: none;
     font-size: 1.1rem;
-    transition: color 0.3s;
+    padding: 10px 18px;
+    box-shadow: 0 4px 8px #b3992b;
+    transition: all 0.3s ease;
   }
   nav a:hover {
+    background-color: #bfa334;
+    box-shadow: 0 6px 12px #998225;
     color: #fff;
   }
 
@@ -154,21 +130,12 @@
 </head>
 <body>
 
-<!-- Fundo animado -->
-<div class="background-container" aria-hidden="true">
-  <div class="gold-bar" style="left: 10%; animation-delay: 0s;"></div>
-  <div class="gold-coin" style="left: 20%; animation-delay: 5s;"></div>
-  <div class="gold-bar" style="left: 40%; animation-delay: 2s;"></div>
-  <div class="gold-coin" style="left: 60%; animation-delay: 7s;"></div>
-  <div class="gold-bar" style="left: 80%; animation-delay: 1s;"></div>
-  <div class="gold-coin" style="left: 90%; animation-delay: 8s;"></div>
-</div>
-
 <div class="content-container">
 
   <header>
-    <img src="https://raw.githubusercontent.com/RSVEDO/AZX-Token/main/AZX%20TOKEN%202.png" alt="AZX Token Logo" />
+    <img class="logo" src="https://raw.githubusercontent.com/RSVEDO/AZX-Token/main/AZX%20TOKEN%202.png" alt="AZX Token Logo" />
     <h1>AZX Token</h1>
+    <img class="gold-bars" src="https://raw.githubusercontent.com/RSVEDO/AZX-Token/main/BARRAS%20DE%20OURO.png" alt="Barras de Ouro" />
   </header>
 
   <nav>
