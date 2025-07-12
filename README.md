@@ -8,7 +8,7 @@ AZX é um token BEP-20 criado na Binance Smart Chain com mecanismos automáticos
 
 ## Tokenomics
 
-- Nome: AzevedoX  
+- Nome: AZX  - Token 
 - Símbolo: AZX  
 - Total Supply: 1.000.000.000 AZX  
 - Decimais: 18  
