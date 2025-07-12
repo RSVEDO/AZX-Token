@@ -1,116 +1,199 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AzevedoX - AZX Token</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #121212;
-      color: #fff;
-      margin: 0;
-      padding: 20px;
-      line-height: 1.6;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AzevedoX - AZX Token</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle at center, #1c1a12 0%, #000000 100%);
+    color: #f9f5e7;
+    min-height: 100vh;
+  }
+  header {
+    background: radial-gradient(circle at center, #bfa64f 0%, #6f5f19 80%);
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px #d4c765;
+  }
+  header img {
+    width: 140px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 4px #f9e74a);
+  }
+  header h1 {
+    font-size: 3rem;
+    color: #f9e74a;
+    letter-spacing: 0.15em;
+    text-shadow:
+      0 0 5px #d7c84a,
+      0 0 10px #f9e74a,
+      0 0 15px #bfa64f;
+  }
+  header p {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: -10px;
+    text-shadow: 0 0 5px #a89137;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  section {
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #e7d560;
+    border-bottom: 3px solid #bfa64f;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-shadow: 0 0 6px #c5b45d;
+  }
+
+  p, li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f3edcc;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 25px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(191, 166, 79, 0.1);
+    box-shadow: 0 0 15px #bfa64f88 inset;
+  }
+
+  th, td {
+    padding: 12px 18px;
+    border: 1px solid #bfa64f77;
+    text-align: left;
+    color: #f3edcc;
+  }
+
+  th {
+    background: rgba(191, 166, 79, 0.3);
+    font-weight: 700;
+  }
+
+  a.button {
+    background: linear-gradient(45deg, #d8c757, #a38c1f);
+    color: #1c1a12;
+    padding: 14px 26px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow:
+      0 0 10px #f0e843,
+      0 4px 10px #a48a12;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+  }
+  a.button:hover {
+    background: linear-gradient(45deg, #f8e956, #c6a313);
+    box-shadow:
+      0 0 15px #fff84d,
+      0 6px 20px #c6a313;
+    color: #1c1a12;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    header h1 {
+      font-size: 2rem;
     }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
+    main {
+      margin: 15px;
+      padding: 0 10px;
     }
-    header img {
-      width: 150px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      color: gold;
-      margin-bottom: 0.3em;
-    }
-    section {
-      max-width: 800px;
-      margin: auto;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    th, td {
-      padding: 12px;
-      border: 1px solid #444;
-    }
-    th {
-      background: #333;
-    }
-    a {
-      color: gold;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    ol, ul {
-      padding-left: 1.2em;
-    }
-    footer {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #666;
-    }
-  </style>
+  }
+
+</style>
 </head>
 <body>
 
-  <header>
-    <img src="https://i.imgur.com/yourLogoLink.png" alt="Logo AzevedoX AZX" />
-    <h1>AzevedoX (AZX) - O Futuro do Ouro Digital</h1>
-    <p>Token BEP-20 com taxas automáticas, segurança e valorização contínua.</p>
-  </header>
+<header>
+  <img src="https://i.imgur.com/yourLogoLink.png" alt="AzevedoX Logo" />
+  <h1>AZX TOKEN</h1>
+  <p>O Ouro Digital da Nova Era Blockchain</p>
+</header>
 
-  <section>
+<main>
+
+  <section id="sobre">
+    <h2>Sobre o AZX</h2>
+    <p>O AzevedoX (AZX) é um token BEP-20 construído para revolucionar o conceito de ativos digitais, trazendo segurança, valorização e liquidez automática para seus holders. Com um design inspirado no ouro e tecnologia de ponta, o AZX busca ser referência no mercado de criptoativos.</p>
+  </section>
+
+  <section id="tokenomics">
     <h2>Tokenomics</h2>
     <p><strong>Nome:</strong> AzevedoX</p>
     <p><strong>Símbolo:</strong> AZX</p>
     <p><strong>Total Supply:</strong> 1.000.000.000 AZX</p>
     <p><strong>Decimais:</strong> 18</p>
 
-    <h2>Taxas e Distribuição</h2>
+    <h3>Taxas e Destinação</h3>
     <table>
       <thead>
-        <tr><th>Taxa</th><th>Percentual</th><th>Uso</th></tr>
+        <tr>
+          <th>Taxa</th>
+          <th>Percentual</th>
+          <th>Descrição</th>
+        </tr>
       </thead>
       <tbody>
         <tr><td>Reflexão</td><td>3%</td><td>Redistribuição para holders</td></tr>
         <tr><td>Liquidez</td><td>2%</td><td>Adicionada automaticamente ao pool</td></tr>
-        <tr><td>Marketing</td><td>1%</td><td>Fundo para ações e desenvolvimento</td></tr>
+        <tr><td>Marketing</td><td>1%</td><td>Fundo para desenvolvimento e ações</td></tr>
         <tr><td>Queima</td><td>0.5%</td><td>Queima gradual para valorização</td></tr>
       </tbody>
     </table>
-
-    <h2>Como Comprar</h2>
-    <ol>
-      <li>Configure a Binance Smart Chain na sua carteira (MetaMask, Trust Wallet).</li>
-      <li>Acesse PancakeSwap e conecte sua carteira.</li>
-      <li>Pesquise pelo contrato do token AZX: <code>0xSeuContratoAqui</code></li>
-      <li>Realize a troca com slippage recomendado de 6%.</li>
-    </ol>
-
-    <h2>Links Úteis</h2>
-    <ul>
-      <li><a href="https://bscscan.com/token/0xSeuContratoAqui" target="_blank" rel="noopener noreferrer">Contrato no BscScan</a></li>
-      <li><a href="https://t.me/seugrupo" target="_blank" rel="noopener noreferrer">Telegram Oficial</a></li>
-      <li><a href="https://twitter.com/seuprojeto" target="_blank" rel="noopener noreferrer">Twitter Oficial</a></li>
-    </ul>
-
-    <h2>FAQ</h2>
-    <p><strong>O que é o AZX?</strong><br />Token BEP-20 com taxas para valorização e recompensas.</p>
-    <p><strong>Posso vender a qualquer momento?</strong><br />Sim, respeitando as taxas.</p>
-    <p><strong>Como é a segurança?</strong><br />Contrato auditado e com mecanismos anti-bot.</p>
   </section>
 
-  <footer>
-    &copy; 2025 AzevedoX. Todos os direitos reservados.
-  </footer>
+  <section id="roadmap">
+    <h2>Roadmap</h2>
+    <ul>
+      <li><strong>Q3 2025:</strong> Lançamento do token e listagem na PancakeSwap</li>
+      <li><strong>Q4 2025:</strong> Marketing intensivo e parcerias estratégicas</li>
+      <li><strong>Q1 2026:</strong> Auditoria oficial e atualização do contrato</li>
+      <li><strong>Q2 2026:</strong> Lançamento do staking e expansão para outras redes</li>
+    </ul>
+  </section>
+
+  <section id="time">
+    <h2>Nosso Time</h2>
+    <p>Uma equipe especializada em blockchain, marketing e desenvolvimento trabalhando para o sucesso do AZX.</p>
+    <ul>
+      <li><strong>Rodrigo Azevedo</strong> – Fundador & Desenvolvedor</li>
+      <li><strong>Maria Silva</strong> – Marketing & Comunidade</li>
+      <li><strong>Lucas Oliveira</strong> – Designer & Branding</li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Quer saber mais ou tirar dúvidas? Entre em contato conosco:</p>
+    <p>Email: <a href="mailto:contato@azevedox.io" style="color:#d9bf52;">contato@azevedox.io</a></p>
+    <p>Telegram: <a href="https://t.me/seugrupo" target="_blank" rel="noopener noreferrer" style="color:#d9bf52;">@seugrupo</a></p>
+    <a href="https://bscscan.com/token/0xSeuContratoAqui" target="_blank" rel="noopener noreferrer" class="button">Ver no BscScan</a>
+  </section>
+
+</main>
 
 </body>
 </html>
