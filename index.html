@@ -5,125 +5,172 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AZX Token</title>
 <style>
-  /* Reset e fonte */
-  body, html {
-    margin: 0; padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff7d4;
-    color: #6b5700;
+  /* Reset básico */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: #f7e6a3;
+    font-family: Arial, sans-serif;
+    color: #5a4700;
+    overflow-x: hidden;
+  }
+
+  /* Fundo animado */
+  .background-container {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .gold-bar, .gold-coin {
+    position: absolute;
+    opacity: 0.3;
+    animation: floatUp 20s linear infinite;
+  }
+  .gold-bar {
+    width: 120px; /* maior */
+    height: 45px; /* maior */
+    background: linear-gradient(90deg, #d4af37, #f5e18c, #d4af37);
+    border-radius: 5px;
+    box-shadow: 0 0 20px #d4af37;
+  }
+  .gold-coin {
+    width: 70px; /* maior */
+    height: 70px; /* maior */
+    background: radial-gradient(circle at center, #ffec7d 40%, #d4af37 90%);
+    border-radius: 50%;
+    box-shadow: inset 0 0 15px #f5e18c;
+  }
+  @keyframes floatUp {
+    0% {
+      transform: translateY(100vh) translateX(0) rotate(0deg);
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(-150px) translateX(50px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* Conteúdo principal acima do fundo */
+  .content-container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
   }
 
   /* Cabeçalho */
   header {
-    background-color: #c9a82d;
+    background: #c1a536;
+    padding: 20px;
     display: flex;
     align-items: center;
-    padding: 10px 30px;
-    box-shadow: 0 4px 8px rgb(0 0 0 / 0.15);
-    flex-wrap: wrap;
+    gap: 25px;
+    box-shadow: 0 2px 5px #a08626;
   }
-
-  .logo {
-    width: 180px;
-    max-width: 90vw;
+  header img {
+    width: 140px; /* maior */
     height: auto;
-    margin-right: 15px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 3rem; /* maior */
+    color: #5a4700;
+    text-shadow: 1px 1px 2px #fff4b2;
   }
 
-  .site-title {
-    font-weight: 900;
-    font-size: 2rem;
-    color: #4d3d00;
-    text-shadow: 0 0 5px #ab8d00;
-  }
-
-  /* Menu Navegação */
+  /* Menu de navegação */
   nav {
-    margin-left: auto;
+    background: #a38621;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 12px 0;
+    box-shadow: 0 2px 5px #8b731a;
   }
-
   nav a {
+    color: #fff9d5;
+    font-weight: bold;
     text-decoration: none;
-    color: #4d3d00;
-    font-weight: 700;
-    margin: 0 15px;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    transition: color 0.3s;
   }
-
   nav a:hover {
-    color: #d7b700;
+    color: #fff;
   }
 
-  /* Conteúdo principal */
-  main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-
+  /* Seções */
   section {
-    background-color: #fff7d4;
-    padding: 25px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    background: #fff9d5;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #dbce7c;
+  }
+  section h2 {
+    border-bottom: 2px solid #c1a536;
+    padding-bottom: 5px;
+    color: #917b1f;
+  }
+  section p {
+    line-height: 1.6;
   }
 
-  h2 {
-    border-bottom: 2px solid #c9a82d;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
-    color: #7d6900;
-  }
-
+  /* Tabela */
   table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 15px;
   }
-
   th, td {
-    padding: 12px 15px;
-    border: 1px solid #d3bf5b;
-  }
-
-  th {
-    background-color: #c9a82d;
-    color: #3a2c00;
+    border: 1px solid #c1a536;
+    padding: 10px;
     text-align: left;
   }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    margin: 60px 0 30px;
-    color: #7d6900;
-    font-size: 0.9rem;
+  th {
+    background: #c1a536;
+    color: #fff9d5;
+  }
+  tbody tr:nth-child(odd) {
+    background: #fff4b2;
   }
 
-  /* Responsivo simples */
-  @media (max-width: 600px) {
-    header {
-      justify-content: center;
-    }
-    nav {
-      margin-left: 0;
-      margin-top: 10px;
-      width: 100%;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 10px;
-      font-size: 0.9rem;
-    }
+  /* Rodapé */
+  footer {
+    text-align: center;
+    padding: 15px 10px;
+    color: #5a4700;
+    font-size: 0.9rem;
   }
 </style>
 </head>
 <body>
 
-<header>
-  <img src="https://raw.githubusercontent.com/RSVEDO/AZX-Token/main/AZX%20TOKEN%202.png" alt="AZX Token Logo" class="logo" />
-  <div class="site-title">AZX Token</div>
+<!-- Fundo animado -->
+<div class="background-container" aria-hidden="true">
+  <div class="gold-bar" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="gold-coin" style="left: 20%; animation-delay: 5s;"></div>
+  <div class="gold-bar" style="left: 40%; animation-delay: 2s;"></div>
+  <div class="gold-coin" style="left: 60%; animation-delay: 7s;"></div>
+  <div class="gold-bar" style="left: 80%; animation-delay: 1s;"></div>
+  <div class="gold-coin" style="left: 90%; animation-delay: 8s;"></div>
+</div>
+
+<div class="content-container">
+
+  <header>
+    <img src="https://raw.githubusercontent.com/RSVEDO/AZX-Token/main/AZX%20TOKEN%202.png" alt="AZX Token Logo" />
+    <h1>AZX Token</h1>
+  </header>
+
   <nav>
     <a href="#sobre">Sobre</a>
     <a href="#tokenomics">Tokenomics</a>
@@ -131,42 +178,69 @@
     <a href="https://bscscan.com/token/0x96D40B6CCDD96a781bdAFF0F062F0E4b86f8B95e" target="_blank" rel="noopener noreferrer">BscScan</a>
     <a href="https://pancakeswap.finance/swap?outputCurrency=0x96D40B6CCDD96a781bdAFF0F062F0E4b86f8B95e" target="_blank" rel="noopener noreferrer">Comprar</a>
   </nav>
-</header>
 
-<main>
   <section id="sobre">
     <h2>Sobre o AZX Token</h2>
-    <p>
-      O <strong>AZX Token</strong> é um token BEP-20 construído para revolucionar o conceito de ativos digitais,
-      trazendo segurança, valorização e liquidez automática para seus holders.
-      Com um design inspirado no ouro e tecnologia de ponta, o AZX Token busca ser referência no mercado de criptoativos.
-    </p>
+    <p>O <strong>AZX Token</strong> é um token BEP-20 construído para revolucionar o conceito de ativos digitais, trazendo segurança, valorização e liquidez automática para seus holders. Com um design inspirado no ouro e tecnologia de ponta, o AZX Token busca ser referência no mercado de criptoativos.</p>
   </section>
 
   <section id="tokenomics">
     <h2>Tokenomics</h2>
     <table>
-      <tr><th>Nome</th><td>AZX Token</td></tr>
-      <tr><th>Símbolo</th><td>AZX</td></tr>
-      <tr><th>Total Supply</th><td>1.000.000.000 AZX</td></tr>
-      <tr><th>Decimais</th><td>18</td></tr>
+      <tbody>
+        <tr><th>Nome</th><td>AZX Token</td></tr>
+        <tr><th>Símbolo</th><td>AZX</td></tr>
+        <tr><th>Total Supply</th><td>1.000.000.000 AZX</td></tr>
+        <tr><th>Decimais</th><td>18</td></tr>
+      </tbody>
     </table>
 
     <h3>Taxas e Destinação</h3>
     <table>
-      <tr><th>Taxa</th><th>Percentual</th><th>Descrição</th></tr>
-      <tr><td>Reflexão</td><td>3%</td><td>Redistribuição para holders</td></tr>
-      <tr><td>Liquidez Automática</td><td>2%</td><td>Adicionada à liquidez na PancakeSwap</td></tr>
-      <tr><td>Marketing</td><td>1%</td><td>Suporte e expansão do projeto</td></tr>
-      <tr><td>Queima</td><td>0,5%</td><td>Redução do supply para valorização</td></tr>
+      <thead>
+        <tr>
+          <th>Taxa</th>
+          <th>Percentual</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reflexão</td>
+          <td>3%</td>
+          <td>Redistribuição para holders</td>
+        </tr>
+        <tr>
+          <td>Liquidez Automática</td>
+          <td>2%</td>
+          <td>Adicionada à liquidez na PancakeSwap</td>
+        </tr>
+        <tr>
+          <td>Marketing</td>
+          <td>1%</td>
+          <td>Suporte e expansão do projeto</td>
+        </tr>
+        <tr>
+          <td>Queima</td>
+          <td>0,5%</td>
+          <td>Redução do supply para valorização</td>
+        </tr>
+      </tbody>
     </table>
   </section>
-</main>
 
-<footer>
-  <p>Contato: <a href="mailto:contato@azxtoken.com">contato@azxtoken.com</a></p>
-  <p>Site oficial: <a href="https://rsvedo.github.io/AZX-Token/" target="_blank" rel="noopener noreferrer">rsvedo.github.io/AZX-Token</a></p>
-</footer>
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Para dúvidas, parcerias ou mais informações, entre em contato:</p>
+    <p>Email: <a href="mailto:contato@azxtoken.com">contato@azxtoken.com</a></p>
+    <p>Site oficial: <a href="https://rsvedo.github.io/AZX-Token/" target="_blank" rel="noopener noreferrer">rsvedo.github.io/AZX-Token</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 AZX Token. Todos os direitos reservados.
+  </footer>
+
+</div>
 
 </body>
 </html>
